@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>FizzBuzz</title>
+        <script type="text/javascript">
+            function FizzBuzz()
+            {
+                var i;
+                var fb = "FizzBuzz";
+                var fizz = "Fizz";
+                var buzz = "Buzz";
+                for(i = 1; i <= 100; i++)
+                    {
+                       
+                        if(i%3 == 0)
+                           {
+                               document.getElementById("testArea").value += fizz;
+                           }
+                        if(i%5 == 0)
+                           {
+                               document.getElementById("testArea").value += buzz;
+                           }
+                        if((i%3 != 0) && (i%5 != 0))
+                           {
+                                document.getElementById("testArea").value += i;
+                           }
+                        document.getElementById("testArea").value += "\n";
+                    }
+            }
+        </script>
+        <style>
+            *{
+                font-family: monospace;
+            }
+            button{
+                display: block;
+                margin-bottom: 1em;
+                margin-left: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>FizzBuzz in Javascript</h1>
+        <button type="button" onclick="FizzBuzz()">FizzBuzz</button>
+        <textarea rows="50" cols="10" id="testArea" readonly></textarea>
+    </body>
+</html>
