@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Nth Pi Digit</title>
+        <script type="text/javascript">
+            function nthPi(){
+                var digits = document.getElementById("inputBox").value;
+                if((digits < 0) || (digits > 20))
+                    {
+                        alert("unacceptable value! must be between 0 and 20!");
+                    }
+                else
+                    {
+                        document.getElementById("outputBox").value = Math.PI.toFixed(digits);
+                    }
+                
+                
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Nth Pi Digit</h1>
+        <input type="text" id="inputBox">
+        <button type="button" id="submitButton" onclick="nthPi()">Submit</button>
+        <input type="text" id="outputBox" readonly>
+    </body>
+    
+    <style>
+        #outputBox
+        {
+            display: block;
+            margin-top:0.5em;
+        }
+    </style>
+</html>
